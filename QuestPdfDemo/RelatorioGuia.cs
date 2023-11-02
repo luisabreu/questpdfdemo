@@ -178,13 +178,13 @@ public sealed class RelatorioGuia: IDocument {
     private void ComposeFooter(IContainer container) {
         container.Padding(5)
                  .AlignCenter( )
-                 .Height(90)
+                 .Height(60)
                  .Row(r => {
                           // footer left logo
                           r.RelativeItem(2).AlignCenter(  )
-                                            .Height(80)
-                                            .ScaleToFit(  )
-                                            .Image(LoadFooterLogo(  ));
+                                            .Height(50)
+                                            .Image(LoadFooterLogo(  ))
+                                            .FitHeight(  );
                           
                           // footer right side
                           r.RelativeItem(7).AlignCenter(  )
