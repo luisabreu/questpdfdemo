@@ -1,4 +1,5 @@
-﻿using QuestPDF.Previewer;
+﻿using System.Reflection;
+using QuestPDF.Previewer;
 using QuestPdfDemo;
 
 Guia guia = new( ) {
@@ -8,6 +9,8 @@ Guia guia = new( ) {
                        LocalTrabalhoDestino = "SRF - Secretaria Regional Finanças",
                        FuncionarioDestino = "Luis Abreu",
                        TecnicoImpressao = "Luis Miguel Abreu",
+                       EmailTecnicoImpressao = "luis.abreu@madeira.gov.pt",
+                       DataTransporte = DateTime.Now,
                        Equipamentos = new[] {
                                                 new ResumoEquipamento {
                                                                           Subtipo = "Tablet",
@@ -23,9 +26,66 @@ Guia guia = new( ) {
                                                                           Subtipo = "Oticos",
                                                                           Tag = "tag00012135",
                                                                           Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Tablet",
+                                                                          Tag = "tag0001216",
+                                                                          Tipo = "Computador"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Ratos",
+                                                                          Tag = "tag00012164",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Oticos",
+                                                                          Tag = "tag00012165",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Tablet",
+                                                                          Tag = "tag0001212",
+                                                                          Tipo = "Computador"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Ratos",
+                                                                          Tag = "tag00012134",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Oticos",
+                                                                          Tag = "tag00012135",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Tablet",
+                                                                          Tag = "tag0001216",
+                                                                          Tipo = "Computador"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Ratos",
+                                                                          Tag = "tag00012164",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Oticos",
+                                                                          Tag = "tag00012165",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Ratos",
+                                                                          Tag = "tag00012164",
+                                                                          Tipo = "Rato"
+                                                                      },
+                                                new ResumoEquipamento {
+                                                                          Subtipo = "Oticos",
+                                                                          Tag = "tag00012165",
+                                                                          Tipo = "Rato"
                                                                       }
                                             }
                    };
 
-RelatorioGuia relatorio = new(guia);
+string pathToHeaderLogo = $"{Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly( ).Location).AbsolutePath)}\\logo.jpg";
+string pathToFooterLogo = $"{Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly( ).Location).AbsolutePath)}\\logobrancopequeno.png";
+RelatorioGuia relatorio = new(guia, pathToHeaderLogo, pathToFooterLogo);
 relatorio.ShowInPreviewer();

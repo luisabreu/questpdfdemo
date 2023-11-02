@@ -15,6 +15,10 @@ public sealed class Guia {
     public IEnumerable<ResumoEquipamento> Equipamentos { get; set; } = Enumerable.Empty<ResumoEquipamento>( );
 
     public string TecnicoImpressao { get; set; } = "";
+    
+    public string EmailTecnicoImpressao { get; set; } = "";
+    
+    public DateTime DataTransporte { get; set; }
 }
 
 public sealed class ResumoEquipamento {

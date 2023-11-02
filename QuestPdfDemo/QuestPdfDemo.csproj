@@ -13,4 +13,13 @@
       <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.6" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="logo.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="logobrancopequeno.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
