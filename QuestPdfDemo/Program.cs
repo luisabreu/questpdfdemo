@@ -85,7 +85,6 @@ Guia guia = new( ) {
                                             }
                    };
 
-string pathToHeaderLogo = $"{Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly( ).Location).AbsolutePath)}\\logo.jpg";
-string pathToFooterLogo = $"{Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly( ).Location).AbsolutePath)}\\logobrancopequeno.png";
-RelatorioGuia relatorio = new(guia, pathToHeaderLogo, pathToFooterLogo);
+
+RelatorioGuia relatorio = new(guia);
 relatorio.ShowInPreviewer();

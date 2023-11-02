@@ -1,5 +1,6 @@
 using System.Drawing;
 using System.Net.Mime;
+using System.Reflection;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
@@ -10,13 +11,9 @@ namespace QuestPdfDemo;
 public sealed class RelatorioGuia: IDocument {
     
     private readonly Guia _guia;
-    private readonly string _pathToLogo;
-    private readonly string _pathToFooterLogo;
 
-    public RelatorioGuia(Guia guia, string pathToLogo, string pathToFooterLogo) {
+    public RelatorioGuia(Guia guia) {
         _guia = guia;
-        _pathToLogo = pathToLogo;
-        _pathToFooterLogo = pathToFooterLogo;
     }
 
     public void Compose(IDocumentContainer container) {
@@ -141,7 +138,11 @@ public sealed class RelatorioGuia: IDocument {
     }
 
     private byte[] LoadLogoImage() {
-        return File.ReadAllBytes(_pathToLogo);
+        using Stream stream = typeof(RelatorioGuia).Assembly.GetManifestResourceStream("QuestPdfDemo.Lib.logo.jpg");
+        MemoryStream bytes = new( );
+        stream.CopyTo(bytes);
+        
+        return bytes.ToArray(  );
     }
 
     private void ComposeHeader(IContainer container) {
@@ -173,8 +174,14 @@ public sealed class RelatorioGuia: IDocument {
         
     }
 
-    private byte[] LoadFooterLogo() => File.ReadAllBytes(_pathToFooterLogo);
-    
+    private byte[] LoadFooterLogo() {
+        using Stream stream = typeof(RelatorioGuia).Assembly.GetManifestResourceStream("QuestPdfDemo.Lib.logobrancopequeno.png");
+        MemoryStream bytes = new( );
+        stream.CopyTo(bytes);
+        
+        return bytes.ToArray(  );
+    }
+
     private void ComposeFooter(IContainer container) {
         container.Padding(5)
                  .AlignCenter( )
