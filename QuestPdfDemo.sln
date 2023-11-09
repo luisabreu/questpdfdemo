@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestPdfDemo", "QuestPdfDemo\QuestPdfDemo.csproj", "{B335CF6A-F3B3-4DC5-B1F2-CEF0CBEB0F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestPdfDemo.Lib", "QuestPdfDemo.Lib\QuestPdfDemo.Lib.csproj", "{EBB79ECD-63CD-4DD6-9D21-40AC5D9E6C96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestPdfDemo.Lib", "QuestPdfDemo.Lib\QuestPdfDemo.Lib.csproj", "{9B55E77C-0EF7-407D-9862-5C544B033338}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{B335CF6A-F3B3-4DC5-B1F2-CEF0CBEB0F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B335CF6A-F3B3-4DC5-B1F2-CEF0CBEB0F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B335CF6A-F3B3-4DC5-B1F2-CEF0CBEB0F0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EBB79ECD-63CD-4DD6-9D21-40AC5D9E6C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBB79ECD-63CD-4DD6-9D21-40AC5D9E6C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBB79ECD-63CD-4DD6-9D21-40AC5D9E6C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBB79ECD-63CD-4DD6-9D21-40AC5D9E6C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B55E77C-0EF7-407D-9862-5C544B033338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B55E77C-0EF7-407D-9862-5C544B033338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B55E77C-0EF7-407D-9862-5C544B033338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B55E77C-0EF7-407D-9862-5C544B033338}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

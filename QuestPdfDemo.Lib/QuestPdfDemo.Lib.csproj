@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0" />
+        <PackageReference Include="QuestPDF" Version="2023.10.1" />
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.6" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Remove="logobrancopequeno.png" />
+      <EmbeddedResource Include="logobrancopequeno.png" />
+      <None Remove="logo.jpg" />
+      <EmbeddedResource Include="logo.jpg" />
+    </ItemGroup>
+
+</Project>
