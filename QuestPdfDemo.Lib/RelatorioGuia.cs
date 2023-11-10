@@ -34,7 +34,11 @@ public sealed class RelatorioGuia: IDocument {
     }
 
     private void ComposeBody(IContainer container) {
-        container.PaddingVertical(10)
+        container
+            .Background(Colors.Blue.Darken2)
+            .MaxHeight(600)
+            .Background(Colors.Red.Darken2)
+            .PaddingVertical(10)
                  .Column(col => {
                              col.Spacing(5);
                              
@@ -150,9 +154,10 @@ public sealed class RelatorioGuia: IDocument {
         container.Column(c => {
                              // row 1 for title
                              c.Item(  ).PaddingVertical(10)
+                              .MaxHeight(140)
                               .Row(r => {
                                        //image
-                                       r.ConstantItem(170).Image(LoadLogoImage());
+                                       r.ConstantItem(130).Image(LoadLogoImage());
                                        
                                        //text
                                        TextStyle headerTitleStyle = TextStyle.Default.FontSize(16)
@@ -183,9 +188,9 @@ public sealed class RelatorioGuia: IDocument {
     }
 
     private void ComposeFooter(IContainer container) {
-        container.Padding(5)
+        container//.Padding(5)
                  .AlignCenter( )
-                 .Height(60)
+                 .MaxHeight(60)
                  .Row(r => {
                           // footer left logo
                           r.RelativeItem(2).AlignCenter(  )
