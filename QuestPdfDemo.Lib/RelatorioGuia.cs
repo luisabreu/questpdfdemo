@@ -35,9 +35,7 @@ public sealed class RelatorioGuia: IDocument {
 
     private void ComposeBody(IContainer container) {
         container
-            .Background(Colors.Blue.Darken2)
             .MaxHeight(600)
-            .Background(Colors.Red.Darken2)
             .PaddingVertical(10)
                  .Column(col => {
                              col.Spacing(5);
